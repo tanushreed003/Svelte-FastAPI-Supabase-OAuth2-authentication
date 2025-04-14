@@ -1,4 +1,4 @@
-# OAuth2 SSO Authentication Project
+<img src="images/Svelte-FastAPI-Supabase-OAuth2-authentication.png"/>
 
 This project is an application that implements OAuth2 SSO authentication for Google and Kakao using a SvelteKit frontend and FastAPI backend.
 
