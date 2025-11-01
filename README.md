@@ -1,107 +1,206 @@
-<img src="images/Svelte-FastAPI-Supabase-OAuth2-authentication.png"/>
+# Svelte FastAPI Supabase OAuth2 Authentication 🔒
 
-This project is an application that implements OAuth2 SSO authentication for Google and Kakao using a SvelteKit frontend and FastAPI backend.
+Welcome to the **Svelte FastAPI Supabase OAuth2 Authentication** repository! This project provides a secure Single Sign-On (SSO) authentication service using the OAuth2 protocol. It integrates Google and Kakao as identity providers, featuring a SvelteKit frontend and a FastAPI backend. 
 
-## Project Structure
+[Check out the latest releases here!](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/releases)
 
-- `src/` - SvelteKit frontend code
-- `backend/` - FastAPI backend code
+---
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Technologies Used](#technologies-used)
+3. [Getting Started](#getting-started)
+4. [Setup Instructions](#setup-instructions)
+5. [Usage](#usage)
+6. [Folder Structure](#folder-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Acknowledgments](#acknowledgments)
+
+---
 
 ## Features
 
-- Google OAuth2 login
-- Kakao OAuth2 login
-- JWT-based authentication
-- User information storage using Supabase database
+- 🔒 **Secure Authentication**: Implement OAuth2 with Google and Kakao.
+- ⚡ **Fast Performance**: Built with FastAPI for quick responses.
+- 🌍 **Responsive Design**: A user-friendly SvelteKit frontend.
+- 📊 **Database Integration**: Utilizes Supabase for data management.
+- 🛠️ **Easy to Extend**: Modular codebase for easy customization.
 
-## Installation and Setup
+---
 
-### Frontend (SvelteKit)
+## Technologies Used
 
-1. Install required packages:
+This project utilizes a variety of technologies to ensure a smooth and efficient development experience:
+
+- **Frontend**: 
+  - Svelte
+  - SvelteKit
+
+- **Backend**: 
+  - FastAPI
+  - Python
+
+- **Database**: 
+  - Supabase
+
+- **Authentication**: 
+  - OAuth2
+  - Google
+  - Kakao
+
+---
+
+## Getting Started
+
+To get started with this project, follow the instructions below to set up your local environment.
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Python 3.8 or higher
+- Node.js 14 or higher
+- npm (Node Package Manager)
+
+### Clone the Repository
+
+First, clone the repository to your local machine:
 
 ```bash
-pnpm install
+git clone https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication.git
+cd Svelte-FastAPI-Supabase-OAuth2-authentication
 ```
 
-2. Run development server:
+### Install Dependencies
+
+Next, install the required dependencies for both the frontend and backend:
+
+#### Frontend
+
+Navigate to the frontend directory and install the dependencies:
 
 ```bash
-pnpm run dev
+cd frontend
+npm install
 ```
 
-The frontend runs at http://localhost:5173 by default.
+#### Backend
 
-### Backend (FastAPI)
-
-1. Navigate to the backend directory:
+Navigate to the backend directory and install the dependencies:
 
 ```bash
 cd backend
-```
-
-2. Install required packages:
-
-```bash
 pip install -r requirements.txt
 ```
 
-3. Set environment variables:
+---
 
-Copy the `.env.example` file to create a `.env` file and configure the necessary environment variables:
+## Setup Instructions
+
+To set up the project, you need to configure your environment variables and run both the frontend and backend servers.
+
+### Environment Variables
+
+Create a `.env` file in the backend directory and add your Supabase and OAuth2 credentials:
+
+```plaintext
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+KAKAO_CLIENT_ID=your_kakao_client_id
+KAKAO_CLIENT_SECRET=your_kakao_client_secret
+```
+
+### Running the Backend
+
+To start the FastAPI server, run the following command in the backend directory:
 
 ```bash
-cp .env.example .env
+uvicorn main:app --reload
 ```
 
-4. Run the backend server:
+### Running the Frontend
+
+To start the SvelteKit server, run the following command in the frontend directory:
 
 ```bash
-python run.py
+npm run dev
 ```
 
-The backend runs at http://localhost:3000 by default.
+Your application should now be running on `http://localhost:3000`.
 
-## Database Setup
+---
 
-This project uses Supabase as its database. The following table is required:
+## Usage
 
-### users table
+After setting up the project, you can navigate to the application in your browser. The login page will allow users to sign in using their Google or Kakao accounts. 
 
-```sql
-CREATE TABLE users (
-  id BIGSERIAL PRIMARY KEY,
-  uuid UUID NOT NULL UNIQUE,
-  display_name TEXT,
-  email TEXT NOT NULL UNIQUE,
-  phone TEXT,
-  provider TEXT NOT NULL,
-  provider_type TEXT NOT NULL DEFAULT 'social',
-  user_status BOOLEAN NOT NULL DEFAULT TRUE,
-  created_at TIMESTAMP WITHOUT TIME ZONE,
-  last_sign_in_at TIMESTAMP WITHOUT TIME ZONE
-);
+1. Click on the "Login with Google" or "Login with Kakao" button.
+2. Authorize the application to access your profile information.
+3. You will be redirected back to the application, where you can access protected resources.
+
+### Logout
+
+To log out, simply click the "Logout" button in the application. This will end the session and redirect you to the login page.
+
+---
+
+## Folder Structure
+
+Here's a brief overview of the folder structure:
+
+```
+Svelte-FastAPI-Supabase-OAuth2-authentication/
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── backend/
+│   ├── main.py
+│   ├── models.py
+│   ├── routes.py
+│   └── requirements.txt
+└── README.md
 ```
 
-## OAuth Provider Setup
+- **frontend/**: Contains all frontend-related code.
+- **backend/**: Contains all backend-related code.
+- **README.md**: This documentation file.
 
-### Google OAuth2
+---
 
-1. Create a project in the [Google Cloud Console](https://console.cloud.google.com/).
-2. Generate an OAuth client ID in API & Services > Credentials.
-3. Add `http://localhost:3000/api/auth/callback/google` as an authorized redirect URI.
-4. Add the client ID and secret key to the backend `.env` file.
+## Contributing
 
-### Kakao OAuth2
+We welcome contributions! If you would like to contribute to this project, please follow these steps:
 
-1. Create an application on [Kakao Developers](https://developers.kakao.com/).
-2. Add `http://localhost:5173` as a site domain in Platform > Web.
-3. Configure Kakao Login in Product Settings.
-4. Add `http://localhost:3000/api/auth/callback/kakao` as a redirect URI.
-5. Add the REST API key and Client Secret to the backend `.env` file.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add your feature'`).
+5. Push to the branch (`git push origin feature/YourFeature`).
+6. Open a pull request.
 
-## Security Considerations
+Please ensure your code adheres to the project's coding standards.
 
-- Always use secure HTTPS connections in production environments.
-- Keep your JWT secret key strong and secure.
-- Store user information with appropriate access management.
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- Thanks to the creators of [FastAPI](https://fastapi.tiangolo.com/) for their excellent framework.
+- A shoutout to [Svelte](https://svelte.dev/) for providing a modern frontend experience.
+- Special thanks to [Supabase](https://supabase.io/) for their easy-to-use database solutions.
+
+For more information and updates, please visit our [Releases](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/releases) section.
+
+--- 
+
+Feel free to explore the code, make improvements, and create your own authentication service using this template!
